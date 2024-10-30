@@ -33,6 +33,7 @@ import { UpdateTaskComponent } from './components/update-task/update-task.compon
     MatDialogModule,
     TaskRoutingModule
   ],
+  
   providers: [DatePipe],
 })
 export class TaskModule { }
