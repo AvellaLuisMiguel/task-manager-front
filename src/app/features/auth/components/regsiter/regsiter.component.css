@@ -1,0 +1,26 @@
+.register-container {
+  display: flex;
+  justify-content: center; 
+  padding: 20px; 
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-field {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.error-message {
+  color: red; 
+  margin-bottom: 16px; 
+}
+
+.form-buttons {
+  margin-top: 20px; 
+  display: flex; 
+  justify-content: space-between;
+}

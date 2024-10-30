@@ -1,0 +1,35 @@
+<div class="register-container">
+  <mat-card class="register-card">
+    <mat-card-header>
+      <mat-card-title>Create User</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name" [(ngModel)]="userCreateDto.name" name="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email" [(ngModel)]="userCreateDto.email" name="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="userCreateDto.password" name="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+        <div class="form-buttons">
+          <button mat-raised-button color="primary" (click)="onSubmit()">Create User</button>
+          <button mat-button (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
